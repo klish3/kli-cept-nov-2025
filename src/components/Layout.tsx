@@ -7,6 +7,7 @@ const navigationItems = [
   { label: "_hello", path: "/" },
   { label: "_about-me", path: "/about" },
   { label: "_projects", path: "/projects" },
+  { label: "_theory", path: "/theory" },
 ];
 
 const socialLinks = [
@@ -26,8 +27,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
         <div className="flex-1 bg-black rounded-lg border border-solid border-[#1e2d3d] flex flex-col">
           <header className="h-14 bg-transparent flex items-center border-b border-[#1e2d3d] overflow-x-auto">
             <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#607b96] text-sm sm:text-base px-3 sm:px-6 whitespace-nowrap">
-              faez-taghavi
-            </div>
+Tawanda Kanyangarara            </div>
 
             <Separator orientation="vertical" className="h-full bg-[#1e2d3d]" />
 
@@ -107,7 +107,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
             <Separator orientation="vertical" className="h-full bg-[#1e2d3d] hidden sm:block" />
 
             <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#607b96] text-xs sm:text-base px-3 sm:px-6 flex items-center gap-2 whitespace-nowrap">
-              @faeztgh
+              @klish3
               <img className="w-5 h-5 sm:w-6 sm:h-6" alt="GitHub" src="/frame.svg" />
             </div>
           </footer>

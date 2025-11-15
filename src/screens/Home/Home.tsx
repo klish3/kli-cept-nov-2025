@@ -9,7 +9,7 @@ export const Home = (): JSX.Element => {
         src="/background-blurs.svg"
       />
 
-      <div className="relative px-6 py-12 sm:px-12 sm:py-16 md:pt-32 md:pl-24 lg:pt-[254px] lg:pl-[311px]">
+      <div className="relative px-6 py-12 sm:px-12 sm:py-16 md:pt-32 md:pl-24 lg:pt-24 lg:pl-32 xl:pt-32 xl:pl-40 2xl:pt-40 2xl:pl-48">
         <div className="w-16 sm:w-24 md:w-[122px] h-[2px] md:h-[3px] bg-[#fea55f] mb-12 sm:mb-16 md:mb-[114px]" />
 
         <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#e5e9f0] text-base sm:text-lg mb-4 sm:mb-6">
@@ -17,19 +17,18 @@ export const Home = (): JSX.Element => {
         </div>
 
         <h1 className="[font-family:'Fira_Code',Helvetica] font-normal text-[#e5e9f0] text-3xl sm:text-4xl md:text-5xl lg:text-[62px] mb-6 sm:mb-8 md:mb-[51px]">
-          Faez Taghavi
-        </h1>
+Tawand Kanyangarara        </h1>
 
         <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#4d5bce] text-xl sm:text-2xl md:text-[32px] mb-8 sm:mb-12 md:mb-[91px]">
-          &gt; Front-end developer
+          &gt; Technical Lead
         </div>
 
         <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#607b96] text-sm sm:text-base mb-4 sm:mb-[31px]">
-          //
+          // Front-end 
         </div>
 
         <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#607b96] text-sm sm:text-base mb-4 sm:mb-[30px]">
-          //
+          // AI
         </div>
 
         <div className="[font-family:'Fira_Code',Helvetica] font-medium text-xs sm:text-sm md:text-base break-all">
@@ -39,7 +38,7 @@ export const Home = (): JSX.Element => {
           <span className="text-white"> = </span>
           <span className="text-[#e99287]">&quot;</span>
           <span className="text-[#e99287] underline">
-            https://github.com/faeztgh
+            https://github.com/klish3
           </span>
           <span className="text-[#e99287]">&quot;</span>
         </div>

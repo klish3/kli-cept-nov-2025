@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Separator } from "../../components/ui/separator";
+import { CodeSnippet } from "../../components/ui/code-snippet";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 interface FolderItem {
@@ -278,14 +279,10 @@ export const About = (): JSX.Element => {
           <div className="p-4 sm:p-8 lg:p-12">{renderContent()}</div>
         </div>
 
-        <div className="hidden xl:block w-80 p-6 overflow-auto">
-          <div className="[font-family:'Fira_Code',Helvetica] font-normal text-[#607b96] text-xs mb-4">
-            // Code snippet
-          </div>
-          <div className="bg-[#011221] rounded-lg p-4 border border-[#1e2d3d]">
-            <pre className="[font-family:'Fira_Code',Helvetica] font-normal text-xs text-[#607b96]">
-              <code>
-                {`const aboutMe = {
+        <CodeSnippet
+          className="hidden xl:block w-80 p-6 overflow-auto"
+          caption="// Code snippet"
+          code={`const aboutMe = {
   name: "Faez Taghavi",
   role: "Front-end Developer",
   location: "Iran",
@@ -295,10 +292,7 @@ export const About = (): JSX.Element => {
     "Next.js"
   ]
 };`}
-              </code>
-            </pre>
-          </div>
-        </div>
+        />
       </div>
     </div>
   );
