@@ -10,6 +10,14 @@ import CallApplyComparison from "./components/projectSections/CallApplyCompariso
 import MapObjectComparison from "./components/projectSections/MapObjectComparison";
 import DataTypesComparison from "./components/projectSections/DataTypesComparison";
 import SVGStylingComparison from "./components/projectSections/SVGStylingComparison";
+import { ProxiesComparison } from "./components/projectSections/ProxiesComparison";
+import { CallbacksComparison } from "./components/projectSections/CallbacksComparison";
+import { MicrotaskQueueComparison } from "./components/projectSections/MicrotaskQueueComparison";
+import { CachingComparison } from "./components/projectSections/CachingComparison";
+import { CSPComparison } from "./components/projectSections/CSPComparison";
+import { CSRFComparison } from "./components/projectSections/CSRFComparison";
+import { DebounceThrottleComparison } from "./components/projectSections/DebounceThrottleComparison";
+import { BoxModelComparison } from "./components/projectSections/BoxModelComparison";
 
 interface FolderItem {
   id: string;
@@ -25,7 +33,16 @@ const personalInfoItems: FolderItem[] = [
   { id: "callApply", label: "What's the difference between .call and .apply?", icon: "🔗" },
   { id: "mapObject", label: "What's the difference between Map and a plain Object?", icon: "🗺️" },
   { id: "dataTypes", label: "What are the various data types in JavaScript?", icon: "🔣" },
-  { id: "stylingSVG", label: "Are you familiar with styling SVG?", icon: "🎨" }
+  { id: "stylingSVG", label: "Are you familiar with styling SVG?", icon: "🎨" },
+  { id: "proxies", label: "What are proxies in JavaScript used for?", icon: "🔬" },
+  { id: "callbacks", label: "Explain the concept of a callback function", icon: "📞" },
+  { id: "microtask", label: "Explain the concept of a microtask queue", icon: "⏱️" },
+  { id: "caching", label: "Explain the concept of caching", icon: "💾" }
+  ,
+  { id: "csp", label: "Explain Content Security Policy (CSP)", icon: "🛡️" },
+  { id: "csrf", label: "Explain CSRF and mitigation techniques", icon: "🔐" },
+  { id: "debounceThrottle", label: "Explain debouncing and throttling", icon: "⏳" },
+  { id: "boxModel", label: "Explain the CSS box model", icon: "▢" }
 ];
 
 const professionalInfoItems: FolderItem[] = [
@@ -88,6 +105,47 @@ export const Projects = (): JSX.Element => {
     stylingSVG: [
       { key: "fill/stroke", description: "SVG attributes for colors; can be overridden by CSS" },
       { key: "currentColor", description: "Use `fill=\"currentColor\"` for icon theming" }
+    ],
+    proxies: [
+      { key: "Proxy", description: "Intermediary object that intercepts and customizes operations on target objects" },
+      { key: "Traps", description: "Handler methods like get, set, apply to intercept specific operations" },
+      { key: "Use Cases", description: "Validation, logging, reactivity systems (Vue.js), mocking/testing" }
+    ],
+    callbacks: [
+      { key: "Synchronous", description: "Executed immediately within the function (blocking)" },
+      { key: "Asynchronous", description: "Executed after an operation completes (non-blocking)" },
+      { key: "Use Cases", description: "Network requests, file I/O, timers, event handling" }
+    ],
+    microtask: [
+      { key: "Microtask Queue", description: "Higher priority tasks executed before macrotask queue" },
+      { key: "Microtasks", description: "Promise callbacks, queueMicrotask(), MutationObserver" },
+      { key: "Macrotasks", description: "setTimeout, setInterval, I/O operations" }
+    ],
+    caching: [
+      { key: "Browser Cache", description: "Local storage reducing repeated downloads" },
+      { key: "Service Workers", description: "Enable offline access and cache resources" },
+      { key: "HTTP Caching", description: "Use Cache-Control headers to control cache behavior" }
+    ]
+    ,
+    csp: [
+      { key: "CSP", description: "Restricts allowed resource origins to mitigate XSS and injection attacks" },
+      { key: "Directives", description: "script-src, style-src, img-src, default-src — control resource loading" },
+      { key: "Policy Delivery", description: "Via HTTP header or meta tag (Content-Security-Policy)" }
+    ],
+    csrf: [
+      { key: "CSRF", description: "Attacker triggers actions on behalf of an authenticated user" },
+      { key: "Mitigations", description: "SameSite cookies, CSRF tokens, Origin/Referer checks" },
+      { key: "Patterns", description: "Synchronizer token pattern, double-submit cookie" }
+    ],
+    debounceThrottle: [
+      { key: "Debounce", description: "Wait until events stop before invoking the handler" },
+      { key: "Throttle", description: "Invoke handler at most once per interval" },
+      { key: "When", description: "Debounce for input, Throttle for continuous events (scroll)" }
+    ],
+    boxModel: [
+      { key: "Parts", description: "Content, padding, border, margin" },
+      { key: "box-sizing", description: "content-box (default) vs border-box (includes padding+border)" },
+      { key: "Layout", description: "Understanding box model prevents layout surprises" }
     ]
   };
 
@@ -150,6 +208,62 @@ export const Projects = (): JSX.Element => {
       case "callApply":
         return (
           <CallApplyComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "proxies":
+        return (
+          <ProxiesComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "callbacks":
+        return (
+          <CallbacksComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "microtask":
+        return (
+          <MicrotaskQueueComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "caching":
+        return (
+          <CachingComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "csp":
+        return (
+          <CSPComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "csrf":
+        return (
+          <CSRFComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "debounceThrottle":
+        return (
+          <DebounceThrottleComparison
+            showVisualExamples={showVisualExamples}
+            setShowVisualExamples={setShowVisualExamples}
+          />
+        );
+      case "boxModel":
+        return (
+          <BoxModelComparison
             showVisualExamples={showVisualExamples}
             setShowVisualExamples={setShowVisualExamples}
           />
